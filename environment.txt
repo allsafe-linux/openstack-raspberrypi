@@ -38,3 +38,39 @@ sudo apt update -y && sudo apt upgrade -y
 ```
 喝杯咖啡稍等片刻  
 9.让我想想，接下来怎么安装配置openstack  
+
+Openstack基础环境
+1.Security
+这个官方教程里面建议我们列一张用户名跟密码的Excel表格，这样边看边安装配置很方便。
+使用openssl rand -hex 10命令来生成密码。
+例如：  
+Security	
+Num	Password name	Password value	Description
+1	Database password (no variable used)	704cf47f42163df8e4f5	Root password for the database
+2	admin_token	288359214ebf745790d6	这个在/etc/keystone/keystone.conf中的admin_token行
+3	ADMIN_PASS	1c3049c6b92e89ea8db8	Password of user admin
+4	CINDER_DBPASS	e0af6617879e189f4cf2	Database password for the Block Storage service
+5	CINDER_PASS	ac7ca7ba852362b0a478	Password of Block Storage service user cinder
+6	DASH_DBPASS	ae4d6e95f09f6fa8536d	Database password for the Dashboard
+7	DEMO_PASS	cc5e0d04b95cf363b162	Password of user demo
+8	GLANCE_DBPASS	45885c2969cad51d3cee	Database password for Image service
+9	GLANCE_PASS	246b60f1a55be43d7cc6	Password of Image service user glance
+10	KEYSTONE_DBPASS	8c82a65ee23b717fafa1	Database password of Identity service
+11	METADATA_SECRET	a95521fa6ad698e775b9	Secret for the metadata proxy
+12	NEUTRON_DBPASS	5a4c046a535ba77e71e4	Database password for the Networking service
+13	NEUTRON_PASS	28f997808f49ab15cfdb	Password of Networking service user neutron
+14	NOVA_DBPASS	d7bf0832a70f6623561b	Database password for Compute service
+15	NOVA_PASS	eff68f0dfa3b5525659c	Password of Compute service user nova
+16	PLACEMENT_PASS	bccfd8d4dc7f494896bb	Password of the Placement service user placement
+17	RABBIT_PASS	0d40caaa0c32b2456257	Password of RabbitMQ user openstack
+18	myuser	5d0bb5f11baa14355380	Password of Keystone user myuser（这个是安装好keystone后创建的一个测试账户）
+
+Host networking
+
+
+Network Time Protocol (NTP)
+OpenStack packages
+SQL database
+Message queue
+Memcached
+Etcd
