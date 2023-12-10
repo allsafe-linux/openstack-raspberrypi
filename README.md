@@ -28,4 +28,4 @@ sudo vim /etc/netplan/50-cloud-init.yaml
 9.先更新下ubuntu os：
 sudo apt update -y && sudo apt upgrade -y
 喝杯咖啡稍等片刻
-10.让我想想
+10.让我想想，接下来怎么安装配置openstack
