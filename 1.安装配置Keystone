@@ -1,0 +1,5 @@
+先创建keystone数据库（我抄的官方教程）
+mysql -u root -pdbpassword
+MariaDB [(none)]> CREATE DATABASE keystone;
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'KEYSTONE_DBPASS';
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY 'KEYSTONE_DBPASS';
